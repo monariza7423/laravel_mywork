@@ -21,6 +21,15 @@
       </dd>
     @endforeach
     </dl>
+
+    <script src="{{ asset('js/app.jsx') }}"></script>
+    <script>
+        // ビューファイル内でのReactコンポーネントのレンダリング
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import ParentComponent from './ParentComponent';
+
+        ReactDOM
   </main>
   @include('footer')
 </body>
