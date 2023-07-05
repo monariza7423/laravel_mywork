@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
-    <title>My Work</title>
-</head>
-<body>
-    @include('header')
+@extends('layout')
+
+@section('main')
     <main id="contact" class="wrapper">
         <h1 class="contact-title">Contact</h1>
         <div class="contact-form">
@@ -43,5 +35,4 @@
         </form>
         </div>
     </main>
-    @include('footer')
-</body>
+@endsection

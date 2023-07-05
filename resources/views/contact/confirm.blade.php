@@ -1,32 +1,34 @@
-@include('header')
-<form method="POST" action="{{ route('send') }}">
-    @csrf
-    <input type="hidden" name="email" value="{{ $contact['email'] }}">
-    <input type="hidden" name="contact" value="{{ $contact['contact'] }}">
-    <div class="row">
-        <label for="email" class="col-md-3 text-md-right">メールアドレス:</label>
-        <div class="col-md-9">
-            {{ $contact['email'] }}
-        </div>
-    </div>
-    <div class="row">
-        <label for="contact" class="col-md-3 text-md-right">お問い合わせ内容:</label>
+@extends('layout')
+
+@section('main')
+    <form method="POST" action="{{ route('send') }}">
+        @csrf
+        <input type="hidden" name="email" value="{{ $contact['email'] }}">
+        <input type="hidden" name="contact" value="{{ $contact['contact'] }}">
+        <div class="row">
+            <label for="email" class="col-md-3 text-md-right">メールアドレス:</label>
             <div class="col-md-9">
-                {{ $contact['contact'] }}
+                {{ $contact['email'] }}
             </div>
         </div>
-    </div>
-
-    <div class="form-group row">
-        <div class="offset-md-1 col-md-3">
-            <a href="{{ route('index') }}" class="btn btn-info"><戻る</a> 
+        <div class="row">
+            <label for="contact" class="col-md-3 text-md-right">お問い合わせ内容:</label>
+                <div class="col-md-9">
+                    {{ $contact['contact'] }}
+                </div>
+            </div>
         </div>
 
-        <div class="col-md-2 offset-md-6">
-            <button type="submit" class="btn btn-primary">
-              送信
-            </button>
+        <div class="form-group row">
+            <div class="offset-md-1 col-md-3">
+                <a href="{{ route('index') }}" class="btn btn-info"><戻る</a> 
+            </div>
+
+            <div class="col-md-2 offset-md-6">
+                <button type="submit" class="btn btn-primary">
+                送信
+                </button>
+            </div>
         </div>
-    </div>
-</form>
-@include('footer')
+    </form>
+@endsection
