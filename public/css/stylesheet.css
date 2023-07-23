@@ -73,7 +73,7 @@ li {
   padding: 15px;
 }
 #news dd {
-  width: 80%;
+  width: 70%;
   border-bottom: solid 1px #c8c8c8;
   padding: 15px;
 }
@@ -82,6 +82,13 @@ li {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 65px;
+  margin-top: 80px;
+}
+
+.link{
+  display: block;
+  text-align: center;
+  text-decoration: underline;
 }
 
 
@@ -127,50 +134,52 @@ footer {
   text-align: center;
 }
 
+/* ABOUTページ */
+.about-title{
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.space{
+  margin-bottom: 3em;
+}
+
 /* works */
 .works-title{
   text-align: center;
+  margin-bottom: 80px;
+}
+
+.works-img{
+  width: 640px;
+  height: 417px;
+  margin: 0 auto;
 }
 
 .works-contents{
   max-width: 640px;
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .works-text{
   max-width: 640px;
   margin: 0 auto;
+  margin-bottom: 140px;
 }
 
-.works-img{
-  width: 300px;
-  height: 200px;
+/* NEWS */
+.news-title{
+  text-align: center;
+  margin-bottom: 80px;
 }
 
-dl {
-  display: flex;
-  flex-wrap: wrap;
-  border-top: solid 1px #c8c8c8;
-  margin-bottom: 50px;
-}
-
-dt {
-  width: 20%;
-  border-bottom: solid 1px #c8c8c8;
-  padding: 30px 15px;
-}
-
-dd {
-  width: 80%;
-  border-bottom: solid 1px #c8c8c8;
-  padding: 30px 15px;
-}
-
+/* CONTACT */
 .contact-title{
   text-align: center;
+  margin-bottom: 80px;
 }
-
-/* contact.css */
 
 .contact-form {
   width: 400px;
@@ -192,7 +201,90 @@ dd {
 
 .contact-form button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: black;
   color: #fff;
   border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 600px) {
+  /* title系 */
+  .section-title{
+    margin-bottom: 40px;
+  }
+
+  .about-title{
+    font-size: 1.5rem;
+    margin-bottom: 65px;
+    text-align: center;
+  }
+
+  .works-title{
+    font-size: 1.5rem;
+    margin-bottom: 65px;
+    text-align: center;
+  }
+
+  .news-title{
+    font-size: 1.5rem;
+    margin-bottom: 65px;
+    text-align: center;
+  }
+
+  .contact-title{
+    font-size: 1.5rem;
+    margin-bottom: 65px;
+    text-align: center;
+  }
+
+  /* ヘッダー */
+  #header{
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  #header li{
+    font-size: 0.8rem;
+    margin-left: 20px;
+  }
+
+  #header li:first-child {
+    margin-left: 0;
+  }
+
+  /* WORKS系 */
+  #works ul{
+    flex-direction: column;
+  }
+
+  #works li {
+    width: 100%;
+  }
+
+  #works .list li{
+    margin-bottom: 60px;
+  }
+
+  #works .list li img{
+    margin-bottom: 20px;
+  }
+
+  /* NEWS系 */
+  #news dl{
+    flex-direction: column;
+  }
+
+  #news dt {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  #news dt{
+    width: 100px;
+    padding-top: 0;
+  }
 }

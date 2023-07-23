@@ -6,12 +6,13 @@
         <div class="contact-form">
         <form method="POST" action="{{ route('contacts.confirm') }}">
         @csrf
+
             <label for="name">NAME</label>
             <input id="name" type="text" name="name">
 
             <label for="email" class="col-md-3 col-form-label text-md-right">E-MAIL</label>
-
             <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autofocus>
+
 
             @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -27,7 +28,6 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-
 
             <button type="submit" class="btn btn-primary">
                         送信

@@ -17,7 +17,7 @@
                     <li><img src="{{ asset('image/works5.jpg')}}" alt="Image"></li>
                     <li><img src="{{ asset('image/works6.jpg')}}" alt="Image"></li>
                 </ul>
-                <a href="{{ url('/work')}}">see more</a>
+                <a class="link" href="{{ url('/work')}}">see more</a>
             </section>
 
             <section id="news">
