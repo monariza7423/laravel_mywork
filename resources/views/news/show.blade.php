@@ -2,7 +2,7 @@
 
 @section('main')
   <main id="show" class="wrapper">
-    <h1 class="title">
+    <h1 class="page-title">
       {{ $news->title }}
     </h1>
     <p>{{ $news->created_at }}</p>

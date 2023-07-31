@@ -25,6 +25,7 @@
                 @foreach ($data as $news)
                 <dl>
                     <dt>
+                        <!-- 投稿時間の表示の仕方がわからない -->
                         <h2>{{ $news->created_at }}</h2>
                     </dt>
                     <dd>

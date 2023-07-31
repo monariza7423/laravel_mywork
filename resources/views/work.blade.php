@@ -2,7 +2,7 @@
 
 @section('main')
   <main id="works" class="wrapper">
-    <h1 class="works-title">Works</h1>
+    <h1 class="page-title">Works</h1>
     <div class="works-img">
       <img src="{{ asset('image/works1.jpg')}}">
     </div>

@@ -10,15 +10,18 @@
 </head>
 <body>
   <header>
-    <a href="{{ url('/') }}">
-      <img src="{{ asset('image/logo.svg')}}">
-    </a>
+    <div class="site-title">
+      <a href="{{ url('/') }}">
+        <img src="{{ asset('image/logo.svg')}}">
+      </a>
+    </div>
     <nav>
       <ul>
         <li><a href="{{ url('/about')}}">About</a></li>
         <li><a href="{{ url('/work')}}">Works</a></li>
         <li><a href="{{ route('news.index')}}">News</a></li>
         <li><a href="{{ route('contacts.index')}}">Contact</a></li>
+        <li><img src="{{ asset('image/icon-instagram.png')}}"></li>
       </ul>
     </nav>
   </header>

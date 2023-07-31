@@ -2,17 +2,19 @@
 
 @section('main')
     <main id="contact" class="wrapper">
-        <h1 class="contact-title">Contact</h1>
+        <h1 class="page-title">Contact</h1>
         <div class="contact-form">
         <form method="POST" action="{{ route('contacts.confirm') }}">
         @csrf
+            <div class="form-group">
+                <label for="name" class="label">NAME</label>
+                <input id="name" type="text" name="name">
+            </div>
 
-            <label for="name">NAME</label>
-            <input id="name" type="text" name="name">
-
-            <label for="email" class="col-md-3 col-form-label text-md-right">E-MAIL</label>
-            <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autofocus>
-
+            <div class="form-group">
+                <label for="email" class="label">E-MAIL</label>
+                <input id="email" type="text" name="email" value="{{ old('email') }}" autofocus>
+            </div>
 
             @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -20,9 +22,11 @@
                 </span>
             @enderror
 
-            <label for="contact" class="col-md-3 col-form-label text-md-right">MESSAGE</label>
-            <textarea id="contact" class="form-control  @error('contact') is-invalid @enderror" name="contact" cols="30" rows="10"></textarea>
-
+            <div class="form-group">
+                <label for="contact" class="label">MESSAGE</label>
+                <textarea id="contact" class="form-control  @error('contact') is-invalid @enderror" name="contact" cols="30" rows="10"></textarea>
+            </div>
+            
             @error('contact')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

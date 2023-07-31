@@ -2,7 +2,7 @@
 
 @section('main')
   <main id="about" class="wrapper">
-    <h1 class="about-title">ABOUT</h1>
+    <h1 class="page-title">ABOUT</h1>
 
     <p class="space">Xxxxx Ashley</p>
     <p>2th Floor xxxxx Building x-x-x Nishiazabu, Minato-ku, Tokyo 106-0031 Japan</p>
